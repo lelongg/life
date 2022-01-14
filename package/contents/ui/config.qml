@@ -1,38 +1,51 @@
 /*
-    SPDX-FileCopyrightText: 2022  <>
-    SPDX-License-Identifier: LGPL-2.1-or-later
+SPDX-FileCopyrightText: 2022 <>
+SPDX-License-Identifier: LGPL-2.1-or-later
 */
 
 import QtQuick 2.1
 import QtQuick.Layouts 1.0
-import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Controls 1.4
 
 // for "units"
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-
 ColumnLayout {
     id: root
-    property alias cfg_DisplayText: textField.text
+    spacing: PlasmaCore.Units.smallSpacing
+
+    property alias cfg_birthday: birthday.text;
+    property alias cfg_lifetime: lifetime.text;
 
     RowLayout {
-        spacing: PlasmaCore.Units.largeSpacing / 2
-
-        // To allow aligned integration in the settings form,
-        // "formAlignment" is a property injected by the config containment
-        // which defines the offset of the value fields
-        QtControls.Label {
+        spacing: PlasmaCore.Units.smallSpacing
+        Label {
             Layout.minimumWidth: width
             Layout.maximumWidth: width
             width: formAlignment - PlasmaCore.Units.largeSpacing
             horizontalAlignment: Text.AlignRight
-
-            // use i18nd in config QML, as the default textdomain is set to that of the config container
-            text: i18nd("plasma_wallpaper_org.kde.plasma.life", "Text to Display:")
+            text: i18n("Birthday: ")
         }
-        QtControls.TextField {
-            id: textField
+        TextField {
+            id: birthday
             Layout.fillWidth: true
+            placeholderText: qsTr("yyyy-MM-dd")
+        }
+    }
+
+    RowLayout {
+        spacing: PlasmaCore.Units.smallSpacing
+        Label {
+            Layout.minimumWidth: width
+            Layout.maximumWidth: width
+            width: formAlignment - PlasmaCore.Units.largeSpacing
+            horizontalAlignment: Text.AlignRight
+            text: i18n("Expected lifetime: ")
+        }
+        TextField {
+            id: lifetime
+            Layout.fillWidth: true
+            placeholderText: i18n("years")
         }
     }
 

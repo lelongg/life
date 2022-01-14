@@ -6,9 +6,11 @@
   <kcfgfile name=""/>
 
   <group name="General">
-    <entry name="DisplayText" type="String">
-      <label>Text to display</label>
-      <default>Hello World!</default>
+    <entry name="birthday" type="String">
+      <label>Birthday</label>
+    </entry>
+    <entry name="lifetime" type="int">
+      <label>Lifetime</label>
     </entry>
   </group>
 
