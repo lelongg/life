@@ -8,9 +8,19 @@
   <group name="General">
     <entry name="birthday" type="String">
       <label>Birthday</label>
+      <default>2000-01-01</default>
     </entry>
-    <entry name="lifetime" type="int">
+    <entry name="lifetime" type="Double">
       <label>Lifetime</label>
+      <default>80.0</default>
+    </entry>
+    <entry name="avoidpanels" type="Bool">
+      <label>Avoid panel overlap</label>
+      <default>true</default>
+    </entry>
+    <entry name="panelpadding" type="int">
+      <label>Extra panel padding in pixels</label>
+      <default>0</default>
     </entry>
   </group>
 

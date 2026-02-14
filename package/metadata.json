@@ -1,0 +1,17 @@
+{
+    "KPackageStructure": "Plasma/Wallpaper",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "sisyphe"
+            }
+        ],
+        "Description": "A life-in-weeks wallpaper",
+        "Icon": "preferences-desktop-wallpaper",
+        "Id": "org.kde.plasma.life",
+        "License": "LGPL-2.1+",
+        "Name": "Life",
+        "Version": "0.1"
+    },
+    "X-KDE-ParentApp": "org.kde.plasmashell"
+}
